@@ -11,11 +11,13 @@ pool:
 
 steps:
 - task: TerraformCLI@0
+  displayName: "Install Terraform" 
   inputs:
     command: 'init'
     allowTelemetryCollection: true
 
 - task: TerraformCLI@0
+  displayName: "Run Terraform plan" 
   inputs:
     command: 'plan'
     allowTelemetryCollection: true
